@@ -9,8 +9,10 @@ from sympy import Symbol, integrate, exp, oo
 from scipy.optimize import minimize
 import matplotlib.pyplot as plt
 
+#create array for funtion
 xx = np.linspace(-1,1)
 
+#random function
 def f(x):
     return 8*x**4 - 4*x**2 + 3*x
 
@@ -18,6 +20,6 @@ def f(x):
 plt.plot(xx,f(xx))
 plt.show()
 
-starting_guess = -3
 
-print(minimize(f,[starting_guess]))
+#minimize function
+print(minimize(f,[-1]))
