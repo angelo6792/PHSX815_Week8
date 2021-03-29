@@ -27,10 +27,11 @@ for i in range(-100,100):
         for m in range(0,Nmeas):
             z = float(random.normal(mu_true, sigma))
             mu_best += z
-            mu_bestarr.append(mu_best)
-            mu_truearr.append(mu_true)
 
-np.true_divide(mu_truearr, Nexp)
+np.true_divide(mu_true, Nexp)
+mu_bestarr.append(mu_best)
+mu_truearr.append(mu_true)
+
 
 plt.hist2d(mu_truearr,mu_bestarr, bins = 20)
 plt.hist(x1, bins =20)
